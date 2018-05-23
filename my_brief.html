@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>店铺简介</title>
+	</head>
+
+	<body id="my_info">
+		<div class="my_info_head">
+			<div class="head_tit">
+				<div class="tit_left">
+					<a href="javascript:;"></a>
+				</div>
+				<div class="tit_content">店铺简介</div>
+				<div class="tit_right">
+					<a href="javascript:;" id="showJs"><img src="images/base_add_fff.png" /></a>
+					<ul class="add_con_list" id="add_con_list">
+						<li>
+							<a href="javascript:;">分享商品</a>
+						</li>
+						<li>
+							<a href="javascript:;">收藏本店</a>
+						</li>
+						<li>
+							<a href="javascript:;">分享本店</a>
+						</li>
+						<li>
+							<a href="javascript:;">联系我们</a>
+						</li>
+						<li>
+							<a href="javascript:;">关注我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="head_txt">
+				<div class="txt_left">
+					<img src="images/img/head_pic.jpg" />
+				</div>
+				<div class="txt_right">
+					<h3>宋小宝</h3>
+					<p>旅游顾问</p>
+					<a href="tel:18812345678">18812345678</a>
+				</div>
+				<div class="text_all_right">
+					<p>在售商品</p>
+					<p>22</p>
+				</div>
+			</div>
+		</div>
+		<div class="leave_content">
+			<div class="leave_name">
+				<div class="xleave_data">
+					<p>所属公司简介</p>
+				</div>
+				<div class="xleave_left_arr"><i></i></div>
+			</div>
+			<div class="leave_name">
+				<div class="xleave_data">
+					<p>所在地址</p>
+				</div>
+				<div class="xleave_left_arr">
+					<div class="address_txt">北京市  朝阳区</div>
+				</div>
+			</div>
+			<div class="leave_name base_phone">
+				<div class="xleave_data">
+					<p>联系顾问</p>
+				</div>
+				<div class="xleave_left_arr"><img src="images/base_phone.png"/></div>
+			</div>
+			<div class="leave_name">
+				<div class="xleave_data">
+					<p>店铺二维码</p>
+				</div>
+				<div class="xleave_left_arr"><img src="images/base_scode.png"/></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function Show_Hidden(obj) {
+				if(obj.style.display == 'block') {
+					obj.style.display = 'none';
+				} else {
+					obj.style.display = 'block';
+				}
+			}
+			var myBtn = document.getElementById("showJs");
+			var myContent = document.getElementById("add_con_list");
+			var i, myLi = myContent.getElementsByTagName("li");
+			myBtn.onclick = function() {
+				Show_Hidden(myContent);
+			};
+			for(i = 0; i < myLi.length; i++) {
+				myLi[i].onclick = function() {
+					Show_Hidden(myContent);
+				};
+			}
+		</script>
+	</body>
+
+</html>

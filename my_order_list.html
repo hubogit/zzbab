@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>订单列表</title>
+	</head>
+
+	<body id="my_order_list">
+		<div class="head_tit">
+			<div class="tit_left">
+				<a href="javascript:;"></a>
+			</div>
+			<div class="tit_content">周边游订单</div>
+		</div>
+		<div class="leave_content">
+			<div class="leave_name class_list">
+				<h3 class="arr_up" id="arr_up">[美国东西海岸-夏威夷14日游]月销近百，直飞，10月27日含大瀑布推荐羚羊峡谷，11月28日感恩节火鸡餐，12月圣诞购物节，预售明年2月，均含司导服务费</h3>
+				<div class="order_brief">
+					<p>订单编号：12132423123423123</p>
+					<p>团期：2017-12-12至2017-12-20</p>
+				</div>
+				<div class="order_type_price">
+					<p>已付款</p>
+					<span>￥2134</span>
+				</div>
+			</div>
+			<div class="leave_name class_list">
+				<h3 class="arr_up" id="arr_up">[美国东西海岸-夏威夷14日游]月销近百，直飞，10月27日含大瀑布推荐羚羊峡谷，11月28日感恩节火鸡餐，12月圣诞购物节，预售明年2月，均含司导服务费</h3>
+				<div class="order_brief">
+					<p>订单编号：12132423123423123</p>
+					<p>团期：2017-12-12至2017-12-20</p>
+				</div>
+				<div class="order_type_price">
+					<p>已付款</p>
+					<span>￥2134</span>
+				</div>
+			</div>
+			<div class="leave_name class_list">
+				<h3 class="arr_up" id="arr_up">[美国东西海岸-夏威夷14日游]月销近百，直飞，10月27日含大瀑布推荐羚羊峡谷，11月28日感恩节火鸡餐，12月圣诞购物节，预售明年2月，均含司导服务费</h3>
+				<div class="order_brief">
+					<p>订单编号：12132423123423123</p>
+					<p>团期：2017-12-12至2017-12-20</p>
+				</div>
+				<div class="order_type_price">
+					<p>已付款</p>
+					<span>￥2134</span>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function Show_Hidden(obj) {
+				if(obj.className == 'arr_up') {
+					obj.className = '';
+				} else {
+					obj.className = 'arr_up';
+				}
+			}
+			var addClass = document.getElementById("arr_up");
+			addClass.onclick = function() {
+				Show_Hidden(this);
+			};
+		</script>
+	</body>
+
+</html>

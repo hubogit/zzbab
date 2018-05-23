@@ -1,0 +1,32 @@
+<!doctype html>
+<html style="background: #fff;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body class="Login">
+		<div class="login_head">
+			<a href="javascript:;"><img src="images/base_left_curr.png" width="12px" height="auto" /></a>
+		</div>
+		<form class="login_con">
+			<h3>登录</h3>
+			<input type="text" name="" id="mobile" value="" placeholder="请输入手机号码" class="srk_log" />
+			<input type="password" name="" id="password" value="" placeholder="请输入密码" class="srk_log" />
+			<div class="yanzheng_code">
+				<input type="text" name="" id="icode" value="" placeholder="请输入验证码" class="srk_log" />
+				<div class="code checkCode" id="checkCode" onclick="createCode()"></div>
+
+			</div>
+
+			<input type="button" name="" id="" value="登录" class="login_sub" />
+		</form>
+		<div id="zzdy_lv">输入错误，请重新输入</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

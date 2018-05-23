@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>店铺二维码</title>
+	</head>
+
+	<body id="my_info">
+		<div class="h5_head">
+			<div class="head_tit">
+				<div class="tit_left">
+					<a href="javascript:;"></a>
+				</div>
+				<div class="tit_content">店铺二维码</div>
+			</div>
+			<div class="head_txt">
+				<div class="txt_left">
+					<img src="images/img/head_pic.jpg"/>
+				</div>
+				<div class="people_info">
+					<h3>XXX店铺</h3>
+					<p><i></i>旅游顾问</p>
+					<a href="tel:18812345678"><i></i>18812345678</a>
+				</div>
+			</div>
+		</div>
+		<div class="qr_code">
+			<h3>微信关注</h3>
+			<img src="images/base_qr_code.png"/>
+			<p>长按上方二维码</p>
+			<p>点击"识别图中二维码"</p>
+			<p>即可拥有您的专属旅游顾问</p>
+		</div>
+		<div class="more_server">
+			<p>更多优惠线路和专属服务</p>
+			<div class="server_btn">
+				<a href="javascript:;">进店逛逛</a>
+			</div>
+			<div class="server_btn">
+				<a href="javascript:;">商品咨询</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function Show_Hidden(obj) {
+				if(obj.style.display == 'block') {
+					obj.style.display = 'none';
+				} else {
+					obj.style.display = 'block';
+				}
+			}
+			var myBtn = document.getElementById("showJs");
+			var myContent = document.getElementById("add_con_list");
+			var i,myLi  = myContent.getElementsByTagName("li");
+			myBtn.onclick = function() {
+				Show_Hidden(myContent);
+			};
+			for(i=0;i<myLi.length;i++){
+				myLi[i].onclick = function(){
+					Show_Hidden(myContent);
+				};
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>在线预订</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="pay_top">
+			<a href="javascript:;" class="pay_left_curr"></a>
+			<p>在线预订</p>
+		</div>
+		<div class="pay_content">
+			<h3>马尔代夫库达班多士岛6日4晚自由行(4钻)·国庆热卖★达班多士岛4晚沙...</h3>
+			<div class="pay_deta_x">
+				<div class="deta_x_l">出发日期</div>
+				<div class="deta_x_r">
+					<span>2017/09/08</span>
+					<!--<i></i>-->
+				</div>
+			</div>
+			<div class="price_num">
+				<dl>
+					<dd>成人价：<span>￥2200</span></dd>
+					<dt>
+						<p class="delPar">-</p>
+						<input type="text" name="" id="" value="0"  required="required" class="parNum"/>
+						<p class="addPar">+</p>
+					</dt>
+				</dl>
+				<dl>
+					<dd>儿童价：<span>￥2200</span></dd>
+					<dt>
+						<p class="delChild">-</p>
+						<input type="text" name="" id="" value="0" class="childNum"/>
+						<p class="addChild">+</p>
+					</dt>
+				</dl>
+				<dl>
+					<dd>订单总额：<span>￥2200</span></dd>
+				</dl>
+			</div>
+			<div class="user_wumen">
+				<dl>
+					<dd>联系人：</dd>
+					<dt><input type="" name="" id="" value="" placeholder="必填，请填写联系人姓名" /></dt>
+				</dl>
+				<dl>
+					<dd>手机号：</dd>
+					<dt><input type="" name="" id="" value="" placeholder="必填，请填写联系人手机号"/></dt>
+				</dl>
+				<dl>
+					<dd>备&nbsp;&nbsp;&nbsp;注：</dd>
+					<dt><textarea name="" rows="" placeholder="选填" cols=""></textarea></dt>
+				</dl>
+			</div>
+			<div class="Reminder">温馨提示:余位紧张,越早提交订单,我们就能越早为您保留预定名额。</div>
+			<div class="pay_footer">
+				<p>提交后，旅游顾问-杨乐乐将与您确认订单及最终价格</p>
+				<input type="submit" name="" id="tijiao_list" value="提交订单" />
+			</div>
+		</div>
+		<div id="zzdy_lv">订单提交成功</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".delPar").click(function() {
+				var a = parseInt($(".parNum").val());
+				if(a > 1) {
+					a -= 1;
+				};
+				$(".parNum").val(a)
+			});
+			$(".delChild").click(function() {
+				var a = parseInt($(".childNum").val());
+				if(a > 0) {
+					a -= 1;
+				};
+				$(".childNum").val(a)
+			});
+			$(".addPar").click(function() {
+				var a = parseInt($(".parNum").val())
+				a += 1;
+				$(".parNum").val(a)
+			})
+			$(".addChild").click(function() {
+				var a = parseInt($(".childNum").val())
+				a += 1;
+				$(".childNum").val(a)
+			})
+			$("#tijiao_list").click(function(){
+				$("#zzdy_lv").show()
+			})
+		</script>
+	</body>
+
+</html>

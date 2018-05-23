@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>订单结算页</title>
+    <link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/line_pay.css">
+</head>
+
+<body>
+    <div class="header_hb">
+        <a href="line_pay.html" class="return_go">
+            <span class="return_go_b"></span>
+        </a>
+        <div class="title_he">开发票</div>
+    </div>
+    <div class="weui-cells invoces">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>发票类型:</p>
+            </div>
+            <div class="weui-cell__ft invoceType">
+                <label style="margin-right: 31px;"><input type="radio" name="invo" value="1" checked="checked" >个人</label>
+                <label><input type="radio" name="invo" value="2">公司</label>
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells weui-cells_form invoces_con">
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">发票抬头：</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="请输入开票公司名称">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">发票税号：</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="请输入纳税人识别号">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label for="name" class="weui-label">发票内容：</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" id="invoice" type="text" value="">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">寄送地址：</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text"  placeholder="请填写发票邮寄地址">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">收件人：</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text"  placeholder="请填写发票收件人姓名">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">手机号：</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请填写发票收件人手机号">
+            </div>
+        </div>
+    </div>
+    <div class='demos_padded'>
+        <a href="line_pay.html" class="weui-btn">保存</a>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-weui.min.js"></script>
+    <script type="text/javascript">
+    $("#invoice").picker({
+        title: "请选择发票内容",
+        cols: [{
+            textAlign: 'center',
+            values: ['团费','签证费','旅游费','代订房费','代订餐费','代订车费','代订机票费','代订住宿费','代订交通费','代订住宿交通费','代订房费机票费']
+        }]
+    });
+    $(".invoceType input[type='radio']").change(function(){
+    		if($(this).val() == 2){
+    			$(this).parent().addClass('color').siblings().removeClass("color");
+    			$(".invoces_con").show();
+    		}else{
+    			$(this).parent().addClass('color').siblings().removeClass("color");
+    			$(".invoces_con").hide();
+    		}
+    })
+    </script>
+</body>
+
+</html>
